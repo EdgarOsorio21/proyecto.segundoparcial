@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte1" language="groovy" pageWidth="612" pageHeight="842" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="391bcb61-cc81-454e-ba3c-32cb65367c46">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     producto.`ID` AS producto_ID,
+     producto.`NOMBRE` AS producto_NOMBRE,
+     producto.`PRECIO` AS producto_PRECIO,
+     producto.`DESCRIPCION` AS producto_DESCRIPCION,
+     producto.`CANTIDAD` AS producto_CANTIDAD
+FROM
+     `producto` producto]]>
+	</queryString>
+	<field name="producto_ID" class="java.lang.Long"/>
+	<field name="producto_NOMBRE" class="java.lang.String"/>
+	<field name="producto_PRECIO" class="java.lang.Float"/>
+	<field name="producto_DESCRIPCION" class="java.lang.String"/>
+	<field name="producto_CANTIDAD" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="213" splitType="Stretch">
+			<staticText>
+				<reportElement x="156" y="0" width="247" height="68" uuid="fd653e75-fb24-44be-934d-e897c3ac1b07"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PRODUCTOS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="211" y="83" width="123" height="130" uuid="9dd22ef0-3309-41da-b740-bdd73487ff43"/>
+				<imageExpression><![CDATA["C:\\Users\\dabid\\OneDrive\\Imágenes\\imagenes\\libreria (1).png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="20" uuid="d3147c35-ff68-4150-b1a2-f418ae584456"/>
+				<text><![CDATA[ID DEL PRODUCTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="2" width="100" height="20" uuid="db99015b-731c-4806-9290-a7b932eee5ae"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="6" width="100" height="20" uuid="920aa198-b4cd-40e5-9f00-327925d5ca0e"/>
+				<text><![CDATA[PRECIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="6" width="100" height="20" uuid="9839f159-883a-4ea9-a7cf-3b43e57f7b15"/>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="6" width="100" height="20" uuid="f3a330f4-6f7d-494b-ad4d-581e82f5484f"/>
+				<text><![CDATA[producto_DESCRIPCION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="8" width="100" height="20" uuid="6040da40-d557-401c-8177-cdee976218dd"/>
+				<textFieldExpression><![CDATA[$F{producto_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="8" width="100" height="20" uuid="1c897841-2ebf-4270-9906-22c20d010c82"/>
+				<textFieldExpression><![CDATA[$F{producto_NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="8" width="100" height="20" uuid="4088f8d2-2a13-4c57-a863-50721b7f5d95"/>
+				<textFieldExpression><![CDATA[$F{producto_PRECIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="8" width="100" height="20" uuid="c7f2044d-aae8-486b-992a-7959e8cea5c1"/>
+				<textFieldExpression><![CDATA[$F{producto_CANTIDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="8" width="100" height="20" uuid="a69aee1e-2bbf-47ab-96e1-bc014f1c8dd0"/>
+				<textFieldExpression><![CDATA[$F{producto_DESCRIPCION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
